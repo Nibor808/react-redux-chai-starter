@@ -26,12 +26,7 @@ class People extends Component {
 
     return (
       <div>
-        <div>
-          <h1>React/Redux Starter</h1>
-        </div>
-        <div>
-          {this.props.people.map( person => this.renderPeople(person) )}
-        </div>
+        {this.props.people.map( person => this.renderPeople(person) )}
       </div>
     );
   }

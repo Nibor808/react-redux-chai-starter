@@ -21,7 +21,7 @@ describe('people', () => {
     expect(actions[0].payload).to.be.a('array');
   });
 
-  it('each element in the array has name property that is not empty', () => {
+  it('each element in the array has "name" property that is not empty', () => {
     actions[0].payload.map((item) => {
       expect(item).to.have.property('name').with.length > 0;
     })
