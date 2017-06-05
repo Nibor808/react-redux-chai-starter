@@ -10,11 +10,12 @@ class People extends Component {
 
   renderPeople(person) {
     return (
-      <ul key={ person.name }>
-        <li>{ person.name }</li>
-        <li>{ person.age }</li>
-        <li>{ person.address.city }</li>
-        <li>{ person.address.street }</li>
+      <ul key={ person.name } className='list-group'>
+        <li className='list-group-item'>name: { person.name }</li>
+        <li className='list-group-item'>age: { person.age }</li>
+        <li className='list-group-item list-group-item-info'>Address:</li>
+        <li className='list-group-item'>city: { person.address.city }</li>
+        <li className='list-group-item'>street: { person.address.street }</li>
       </ul>
     )
   }
@@ -25,8 +26,10 @@ class People extends Component {
     }
 
     return (
-      <div>
-        {this.props.people.map( person => this.renderPeople(person) )}
+      <div className='row'>
+        <div className='col-md-6'>
+          {this.props.people.map( person => this.renderPeople(person) )}
+        </div>
       </div>
     );
   }

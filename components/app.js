@@ -5,14 +5,18 @@ import { Link } from 'react-router-dom';
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className='container'>
         <h1>React/Redux Starter</h1>
-        <div>
-          <Link to='/people'>People</Link>
+        <div className='row'>
+          <div className='col-md-3'>
+            <Link to='/people'>People</Link>
+          </div>
+          <div className='col-md-3'>
+            <Link to='/' className='pull-right'>Back</Link>
+          </div>
         </div>
-        <div>
-          <Link to='/'>Back</Link>
-        </div>
+        <hr />
+        {this.props.children}
       </div>
     )
   }
