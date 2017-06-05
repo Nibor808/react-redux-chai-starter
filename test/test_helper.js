@@ -8,8 +8,9 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from '../reducers';
 
-global.document = new JSDOM('<!doctype html><html><body></body></html>');
-const $ = _$(global.document.window);
+global.window = new JSDOM('<!doctype html><html><head></head><body><p>Hello</p></body></html>').window;
+global.document = global.window.document;
+const $ = _$(global.window);
 
 const storeWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const Store = storeWithMiddleware(reducers);
