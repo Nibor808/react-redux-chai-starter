@@ -8,10 +8,10 @@ export default class App extends Component {
       <div className='container'>
         <h1>React/Redux Starter</h1>
         <div className='row'>
-          <div className='col-md-3'>
+          <div className='col-sm-3'>
             <Link to='/people'>People</Link>
           </div>
-          <div className='col-md-3'>
+          <div className='col-sm-3'>
             <Link to='/' className='pull-right'>Back</Link>
           </div>
         </div>
